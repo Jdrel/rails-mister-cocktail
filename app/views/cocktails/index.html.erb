@@ -1,0 +1,29 @@
+<div class="wrapper">
+  <div class="container">
+    <div class="columns  is-multiline">
+      <% @cocktails.each_with_index do |cocktail, index| %>
+      <div class="column is-3">
+        <div class="card">
+          <div class="card-image">
+            <figure class="image is-4by3">
+              <img src=<%= "https://picsum.photos/1280/960?random&"+(1..999999).to_a.sample.to_s %> alt="Placeholder image">
+            </figure>
+          </div>
+          <div class="card-content">
+            <div class="media">
+              <div class="media-content">
+                <p class="title is-4"><%= link_to cocktail.name, cocktail_path(cocktail) %></p>
+              </div>
+            </div>
+            <div class="content">
+              Doses:
+              </ul>
+              <br>
+            </div>
+          </div>
+        </div>
+      </div>
+      <% end %>
+    </div>
+  </div>
+</div>
